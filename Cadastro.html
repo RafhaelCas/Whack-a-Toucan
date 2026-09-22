@@ -1,21 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-    </style>
+    <title>Whack a Toucan</title>
+    <link rel="stylesheet" href="Estilo.css">
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <p>Voltar a </p><a href="Login.html">Login</a>
+    <div id="LoginBox">
+        <h1>CADASTRO</h1>
+        <h2>Whack a Toucan</h2>
+        <p class="LabelCadastro">Nome completo</p>
+        <input type="text" placeholder="Nome completo">
+        <div class="Linha">
+            <div class="Campo">
+                <p class="LabelCadastro">Data de Nascimento</p>
+                <input class="CadastroInput" type="date">
+            </div>
+            <div class="Campo">
+                <p class="LabelCadastro">CPF</p>
+                <input class="CadastroInput" type="text" placeholder="CPF">
+            </div>
+        </div>
+
+        <div class="Linha">
+            <div class="Campo">
+                <p class="LabelCadastro">Telefone</p>
+                <input class="CadastroInput" type="text" placeholder="Telefone">
+            </div>
+            <div class="Campo">
+                <p class="LabelCadastro">E-mail</p>
+                <input class="CadastroInput" type="email" placeholder="E-mail">
+            </div>
+        </div>
+
+        <div class="Linha">
+            <div class="Campo">
+                <p class="LabelCadastro">Nome (username)</p>
+                <input class="CadastroInput" type="text" placeholder="Username">
+            </div>
+            <div class="Campo">
+                <p class="LabelCadastro">Senha</p>
+                <input class="CadastroInput" type="password" placeholder="Senha">
+            </div>
+        </div>
+        <h3><a id="EntrarLink" href="Login.html">CRIAR CONTA</a></h3>
+
+        <a id="CadastroLink" href="Login.html">Voltar para Login</a>
 </body>
 </html>
