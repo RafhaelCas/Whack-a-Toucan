@@ -92,7 +92,8 @@ body {
     width: 100%;
 }
 
-#LoginBox h3 {
+/* Botão de ação (substitui o h3) */
+#LoginBox .btn-acao {
     background-color: var(--cor-verde);
     border: 4px solid var(--cor-borda);
     border-bottom-width: 8px;
@@ -104,7 +105,13 @@ body {
     font-weight: 900;
     margin-top: 24px;
     padding: 10px;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
+}
+
+#LoginBox .btn-acao:hover {
+    background-color: var(--cor-verde-hover);
 }
 
 #EntrarLink {
@@ -114,17 +121,18 @@ body {
 
 #CadastroLink {
     color: var(--cor-verde);
+    display: block;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 4px;
+    margin-top: 12px;
     text-decoration: underline;
 }
 
 #Cadastro {
     color: #333333;
     font-size: 22px;
-    margin-bottom: 8px;
-    margin-top: 3px;
+    margin-bottom: 4px;
+    margin-top: 12px;
     text-align: center;
 }
 
@@ -298,11 +306,14 @@ body {
     border-radius: var(--raio);
     color: #ffffff;
     cursor: pointer;
+    display: block;
     font-family: Arial, sans-serif;
     font-size: 1rem;
     font-weight: 900;
     letter-spacing: 0.02em;
     padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
 }
 
