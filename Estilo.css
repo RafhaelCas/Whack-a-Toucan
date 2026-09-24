@@ -1,7 +1,7 @@
 /* ── Variáveis ── */
 :root {
     --cor-header: #3a1f0d;
-    --cor-fundo: #e8f4e9;
+    --cor-fundo: #b7dbba;
     --cor-card: #ffffff;
     --cor-borda: #3a1f0d;
     --cor-verde: #1fa006;
@@ -12,8 +12,8 @@
     --cor-texto: #1a1a1a;
     --cor-texto-fraco: #666666;
     --cor-desabilitado: #c9b9b0;
-    --raio: 8px;
-    --raio-grande: 16px;
+    --raio: 4px;
+    --raio-grande: 5px;
 }
 
 /* ── Reset ── */
@@ -189,22 +189,9 @@ body {
     font-weight: 900;
 }
 
-.btn-voltar {
-    background-color: #111111;
-    border: none;
-    border-radius: 50%;
-    color: #ffffff;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    height: 30px;
-    width: 30px;
-}
-
 .cabecalho-usuario {
     background-color: #1a1a1a;
-    border-radius: 20px;
+    border-radius: 7px;
     color: #ffffff;
     font-size: 0.875rem;
     font-weight: 700;
@@ -230,7 +217,7 @@ body {
 
 .cabecalho-link--ativo {
     background-color: var(--cor-laranja);
-    border-radius: 20px;
+    border-radius: 7px;
     padding: 6px 14px;
 }
 
@@ -240,7 +227,7 @@ body {
 
 .cabecalho-link--desconectar {
     background-color: var(--cor-vermelho);
-    border-radius: 20px;
+    border-radius: 7px;
     padding: 6px 14px;
 }
 
@@ -485,11 +472,11 @@ body {
 }
 
 .buraco-personagem {
-    bottom: 16px;
-    height: 60px;
+    bottom: -25px;
+    height: 170px;
     object-fit: contain;
     position: absolute;
-    width: 60px;
+    width: 170px;
 }
 
 /* HUD */
