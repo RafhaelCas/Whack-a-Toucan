@@ -1,118 +1,695 @@
-* {
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+/* ── Variáveis ── */
+:root {
+    --cor-header: #3a1f0d;
+    --cor-fundo: #e8f4e9;
+    --cor-card: #ffffff;
+    --cor-borda: #3a1f0d;
+    --cor-verde: #1fa006;
+    --cor-verde-hover: #178a05;
+    --cor-laranja: #ff8c00;
+    --cor-vermelho: #d63030;
+    --cor-vermelho-hover: #b52828;
+    --cor-texto: #1a1a1a;
+    --cor-texto-fraco: #666666;
+    --cor-desabilitado: #c9b9b0;
+    --raio: 8px;
+    --raio-grande: 16px;
+}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(to bottom, #c4e6c5, #80e385);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        #LoginBox {
-            width: 100%;
-            max-width: 460px;
-            background-color: #ffffff;
-            padding: 30px;
-            border: 4px solid #362012;
-            border-radius: 4px;
-            text-align: center;
-        }
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
 
-        h1 {
-            display: inline-block;
-            background-color: #ff8c00;
-            color: aliceblue;
-            border: 4px solid rgb(42, 24, 0);
-            border-bottom: 8px solid rgb(42, 24, 0);
-            border-radius: 4px;
-            padding: 5px 10px; 
-            margin: 0;
-            font-size: 27px;
-            font-weight: 900;
-        }
-        h2 {
-            font-size: large;
-            margin-top: 2px;
-            color: #361907;
-            font-weight: 900;
-            margin-bottom: 0;
-        }
-        p {
-            padding-top: 10px;
-            font-size: 22px;
-            text-align: left;
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-        input {
-            width: 100%;
-            max-width: 400px;
-            height: 50px;
-            border: 3px solid rgb(54, 53, 50);
-            border-radius: 4px;
-            font-size: 25px;
-        }
-        h3 {
-            display: block;
-            width: 100%;
-            background-color: #21aa06;
-            color: aliceblue;
-            border: 4px solid rgb(42, 24, 0);
-            border-bottom: 8px solid rgb(42, 24, 0);
-            border-radius: 6px;
-            padding: 10px;
-            font-size: 20px;
-            font-weight: 900;
-            margin-top: 24px;
-            cursor: pointer     
-        }
-        #CadastroLink {
-            color: #1a7f05;
-            font-weight: bold;
-            text-decoration: underline;
-            margin-left: 4px;
-            font-size: 20px;
-        }
-        #Cadastro {
-            margin-top: 3px;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #333;
-            text-align: center;
-            font-size: 22px;
-        }
-        #EntrarLink {
-            text-decoration: none;
-            color: aliceblue;
-        }
+/* ============================================
+   PÁGINAS DE AUTH (Login e Cadastro)
+   ============================================ */
 
-        .Linha {
-            display: flex;
-            gap: 15px;
-        }
+.pagina-auth {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
 
-        .Campo {
-            width: 50%;
-        }
+#LoginBox {
+    background-color: var(--cor-card);
+    border: 4px solid var(--cor-borda);
+    border-radius: 4px;
+    max-width: 460px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
 
-        .LabelCadastro {
-            font-size: 20px;
-            text-align: left;
-            font-weight: bold;
-            margin-bottom: 3px;
-            margin-top: 0;
-        }
+#LoginBox h1 {
+    background-color: var(--cor-laranja);
+    border: 4px solid var(--cor-borda);
+    border-bottom-width: 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 27px;
+    font-weight: 900;
+    margin: 0;
+    padding: 5px 10px;
+}
 
-        .CadastroInput {
-            width: 100%;
-            max-width: 300px;
-            height: 40px;
-            border: 3px solid rgb(54, 53, 50);
-            border-radius: 4px;
-            font-size: 25px;
-        }
+#LoginBox h2 {
+    color: #361907;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+#LoginBox p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+#LoginBox input {
+    border: 3px solid rgb(54, 53, 50);
+    border-radius: 4px;
+    font-size: 25px;
+    height: 50px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#LoginBox h3 {
+    background-color: var(--cor-verde);
+    border: 4px solid var(--cor-borda);
+    border-bottom-width: 8px;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 24px;
+    padding: 10px;
+    width: 100%;
+}
+
+#EntrarLink {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#CadastroLink {
+    color: var(--cor-verde);
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 4px;
+    text-decoration: underline;
+}
+
+#Cadastro {
+    color: #333333;
+    font-size: 22px;
+    margin-bottom: 8px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.Linha {
+    display: flex;
+    gap: 15px;
+}
+
+.Campo {
+    width: 50%;
+}
+
+.LabelCadastro {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.CadastroInput {
+    border: 3px solid rgb(54, 53, 50);
+    border-radius: 4px;
+    font-size: 25px;
+    height: 40px;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* ============================================
+   HEADER (páginas pós-login)
+   ============================================ */
+
+.cabecalho {
+    align-items: center;
+    background-color: var(--cor-header);
+    display: flex;
+    gap: 12px;
+    height: 56px;
+    padding: 0 20px;
+}
+
+.cabecalho-logo {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.cabecalho-logo-titulo {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.btn-voltar {
+    background-color: #111111;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 30px;
+    width: 30px;
+}
+
+.cabecalho-usuario {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 6px 14px;
+}
+
+.cabecalho-nav {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.cabecalho-link {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cabecalho-link:hover {
+    text-decoration: underline;
+}
+
+.cabecalho-link--ativo {
+    background-color: var(--cor-laranja);
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+
+.cabecalho-link--ativo:hover {
+    text-decoration: none;
+}
+
+.cabecalho-link--desconectar {
+    background-color: var(--cor-vermelho);
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+
+.cabecalho-link--desconectar:hover {
+    background-color: var(--cor-vermelho-hover);
+    text-decoration: none;
+}
+
+/* ============================================
+   LAYOUT E CARDS
+   ============================================ */
+
+.pagina-conteudo {
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    border: 3px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+    padding: 24px;
+}
+
+.card-titulo {
+    align-items: center;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 900;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+/* ============================================
+   BOTÕES GLOBAIS
+   ============================================ */
+
+.btn-primario {
+    background-color: var(--cor-verde);
+    border: 3px solid var(--cor-borda);
+    border-bottom-width: 6px;
+    border-radius: var(--raio);
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.btn-primario:hover {
+    background-color: var(--cor-verde-hover);
+}
+
+.btn-perigo {
+    background-color: var(--cor-vermelho);
+    border: 3px solid var(--cor-borda);
+    border-bottom-width: 6px;
+    border-radius: var(--raio);
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    padding: 12px 20px;
+    width: 100%;
+}
+
+.btn-perigo:hover {
+    background-color: var(--cor-vermelho-hover);
+}
+
+/* ============================================
+   TABELAS
+   ============================================ */
+
+.tabela {
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+    width: 100%;
+}
+
+.tabela thead tr {
+    background-color: var(--cor-header);
+    color: #ffffff;
+}
+
+.tabela th {
+    font-weight: 700;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.tabela td {
+    border-bottom: 1px solid #e0e0e0;
+    color: var(--cor-texto-fraco);
+    padding: 12px;
+}
+
+.tabela tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.badge {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+}
+
+.badge--vitoria {
+    border-color: var(--cor-verde);
+    color: var(--cor-verde);
+}
+
+.badge--derrota {
+    border-color: var(--cor-vermelho);
+    color: var(--cor-vermelho);
+}
+
+/* ============================================
+   JOGO MENU
+   ============================================ */
+
+.jogo-menu-layout {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 420px 1fr;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.campo-label {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+.opcoes-dimensao {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-opcao {
+    background-color: var(--cor-card);
+    border: 3px solid var(--cor-borda);
+    border-bottom-width: 6px;
+    border-radius: var(--raio);
+    color: var(--cor-texto);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px 20px;
+}
+
+.btn-opcao--ativo {
+    background-color: var(--cor-laranja);
+    color: #ffffff;
+}
+
+.opcoes-modalidade {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-modalidade {
+    background-color: var(--cor-card);
+    border: 3px solid var(--cor-borda);
+    border-bottom-width: 6px;
+    border-radius: var(--raio);
+    color: var(--cor-texto);
+    cursor: pointer;
+    flex: 1;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.btn-modalidade--ativo {
+    background-color: var(--cor-verde);
+    color: #ffffff;
+}
+
+/* ============================================
+   JOGO ATIVO
+   ============================================ */
+
+.jogo-ativo-layout {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 280px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.banner-instrucao {
+    background-color: var(--cor-verde);
+    border: 3px solid var(--cor-borda);
+    border-radius: var(--raio);
+    color: #ffffff;
+    display: inline-block;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+}
+
+.tabuleiro-grade {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buraco {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.buraco-oval {
+    background-color: #3a1f0d;
+    border-radius: 50%;
+    height: 32px;
+    width: 100%;
+}
+
+.buraco-personagem {
+    bottom: 16px;
+    height: 60px;
+    object-fit: contain;
+    position: absolute;
+    width: 60px;
+}
+
+/* HUD */
+.hud-card {
+    background-color: var(--cor-card);
+    border: 3px solid var(--cor-borda);
+    border-radius: var(--raio-grande);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+}
+
+.hud-tempo {
+    background-color: var(--cor-vermelho);
+    border-radius: var(--raio);
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+}
+
+.hud-tempo-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hud-tempo-valor {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.hud-stat {
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    font-size: 0.875rem;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.hud-stat:last-of-type {
+    border-bottom: none;
+}
+
+.hud-stat-label {
+    color: var(--cor-texto-fraco);
+}
+
+.hud-stat-valor {
+    color: var(--cor-texto);
+    font-weight: 700;
+}
+
+/* ============================================
+   RANKING
+   ============================================ */
+
+.ranking-card {
+    margin: 0 auto;
+    max-width: 780px;
+}
+
+.ranking-titulo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.badge-posicao {
+    border: 2px solid var(--cor-borda);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 3px 8px;
+}
+
+.badge-posicao--1 {
+    background-color: var(--cor-laranja);
+}
+
+.badge-posicao--2 {
+    background-color: #888888;
+}
+
+.badge-posicao--3 {
+    background-color: #7a5c3a;
+}
+
+.pontuacao-destaque {
+    color: var(--cor-laranja);
+    font-weight: 900;
+}
+
+.texto-destaque {
+    color: var(--cor-texto);
+    font-weight: 700;
+}
+
+.ranking-voltar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ranking-voltar a {
+    color: var(--cor-verde);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ============================================
+   PERFIL
+   ============================================ */
+
+.perfil-card {
+    margin: 0 auto;
+    max-width: 580px;
+}
+
+.perfil-titulo {
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 900;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.perfil-secao-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.perfil-secao-label--bloqueado {
+    color: var(--cor-texto-fraco);
+}
+
+.perfil-secao-label--editavel {
+    color: var(--cor-verde);
+}
+
+.perfil-campos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.perfil-linha {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.label-input {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.campo-input {
+    background-color: var(--cor-card);
+    border: 2px solid var(--cor-borda);
+    border-radius: var(--raio);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    font-size: 0.9375rem;
+    padding: 10px 12px;
+    width: 100%;
+}
+
+.campo-input:focus {
+    outline: 2px solid var(--cor-verde);
+    outline-offset: 2px;
+}
+
+.campo-input:disabled {
+    background-color: var(--cor-desabilitado);
+    border-color: #b0a09a;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .jogo-menu-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .jogo-ativo-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-linha {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-nav {
+        gap: 8px;
+    }
+}

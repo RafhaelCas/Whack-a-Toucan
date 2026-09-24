@@ -1,11 +1,95 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whack a Toucan</title>
-
+    <title>WHACK A TOUCAN — Jogo</title>
+    <link rel="stylesheet" href="Estilo.css">
 </head>
 <body>
-    <h1>WHACK A TOUCAN</h1>
+
+    <header class="cabecalho">
+        <div class="cabecalho-logo">
+            <button class="btn-voltar" type="button">&#10005;</button>
+            <span class="cabecalho-logo-titulo">WHACK A TOUCAN</span>
+        </div>
+        <span class="cabecalho-usuario">&#127918; Toupeira_Pro</span>
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-link" href="ranking.html">Ranking</a>
+            <a class="cabecalho-link" href="perfil.html">Editar Perfil</a>
+            <a class="cabecalho-link cabecalho-link--desconectar" href="Login.html">Desconectar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-conteudo">
+        <div class="jogo-menu-layout">
+
+            <div class="card">
+                <h2 class="card-titulo">&#9881;&#65039; Configurar Partida</h2>
+
+                <p class="campo-label">Dimens&#245;es do Tabuleiro</p>
+                <div class="opcoes-dimensao">
+                    <button class="btn-opcao" type="button">3x3</button>
+                    <button class="btn-opcao btn-opcao--ativo" type="button">4x4</button>
+                    <button class="btn-opcao" type="button">5x5</button>
+                </div>
+
+                <p class="campo-label">Modalidade de Jogo</p>
+                <div class="opcoes-modalidade">
+                    <button class="btn-modalidade btn-modalidade--ativo" type="button">&#128296; Cl&#225;ssica</button>
+                    <button class="btn-modalidade" type="button">&#128163; Explosiva</button>
+                </div>
+
+                <a class="btn-primario" href="JogoIniciado.html">INICIAR PARTIDA</a>
+            </div>
+
+            <div class="card">
+                <h2 class="card-titulo">&#128336; Hist&#243;rico de Partidas</h2>
+                <table class="tabela">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Modalidade</th>
+                            <th>N&#237;vel</th>
+                            <th>Toupeiras Acertadas</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>18/10/2023</td>
+                            <td>Cl&#225;ssica</td>
+                            <td>N&#237;vel 5</td>
+                            <td><strong>28</strong></td>
+                            <td><span class="badge badge--vitoria">Vit&#243;ria</span></td>
+                        </tr>
+                        <tr>
+                            <td>17/10/2023</td>
+                            <td>Explosiva</td>
+                            <td>N&#237;vel 3</td>
+                            <td><strong>15</strong></td>
+                            <td><span class="badge badge--derrota">Derrota</span></td>
+                        </tr>
+                        <tr>
+                            <td>15/10/2023</td>
+                            <td>Cl&#225;ssica</td>
+                            <td>N&#237;vel 8</td>
+                            <td><strong>42</strong></td>
+                            <td><span class="badge badge--vitoria">Vit&#243;ria</span></td>
+                        </tr>
+                        <tr>
+                            <td>12/10/2023</td>
+                            <td>Explosiva</td>
+                            <td>N&#237;vel 6</td>
+                            <td><strong>30</strong></td>
+                            <td><span class="badge badge--vitoria">Vit&#243;ria</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>

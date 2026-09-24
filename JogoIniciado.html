@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toupeira Mania — Partida</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho-logo">
+            <button class="btn-voltar" type="button">&#10005;</button>
+            <span class="cabecalho-logo-titulo">TOUPEIRA MANIA</span>
+        </div>
+        <span class="cabecalho-usuario">&#127918; Toupeira_Pro</span>
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-link" href="ranking.html">Ranking</a>
+            <a class="cabecalho-link" href="perfil.html">Editar Perfil</a>
+            <a class="cabecalho-link cabecalho-link--desconectar" href="Login.html">Desconectar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-conteudo">
+        <div class="jogo-ativo-layout">
+
+            <div class="card">
+                <p class="banner-instrucao">&#128270; CLIQUE NOS TUCANOS! EVITE AS BOMBAS!</p>
+
+                <!-- Tabuleiro 4x4 estático -->
+                <!-- Substitua os src das imagens pelos arquivos PNG do grupo -->
+                <!-- tucano-aparecendo.png: tucano saindo do buraco -->
+                <!-- tucano-acertado.png: tucano sendo acertado -->
+                <!-- bomba.png: bomba no buraco -->
+                <div class="tabuleiro-grade">
+
+                    <!-- Linha 1 -->
+                    <div class="buraco">
+                        <img class="buraco-personagem" src="tucano-aparecendo.png" alt="Tucano">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <img class="buraco-personagem" src="tucano-aparecendo.png" alt="Tucano">
+                        <div class="buraco-oval"></div>
+                    </div>
+
+                    <!-- Linha 2 -->
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <img class="buraco-personagem" src="bomba.png" alt="Bomba">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+
+                    <!-- Linha 3 -->
+                    <div class="buraco">
+                        <img class="buraco-personagem" src="tucano-acertado.png" alt="Tucano acertado">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <img class="buraco-personagem" src="tucano-aparecendo.png" alt="Tucano">
+                        <div class="buraco-oval"></div>
+                    </div>
+
+                    <!-- Linha 4 -->
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+                    <div class="buraco">
+                        <div class="buraco-oval"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- HUD -->
+            <div class="hud-card">
+                <div class="hud-tempo">
+                    <p class="hud-tempo-label">TEMPO RESTANTE</p>
+                    <p class="hud-tempo-valor">00:24s</p>
+                </div>
+
+                <div>
+                    <div class="hud-stat">
+                        <span class="hud-stat-label">Modalidade</span>
+                        <span class="hud-stat-valor">Explosiva</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-stat-label">N&#237;vel Atual</span>
+                        <span class="hud-stat-valor">N&#237;vel 4</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-stat-label">Toupeiras Acertadas</span>
+                        <span class="hud-stat-valor">18</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-stat-label">Acertos no N&#237;vel</span>
+                        <span class="hud-stat-valor">8 / 10</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-stat-label">Porcentagem Atual</span>
+                        <span class="hud-stat-valor">80%</span>
+                    </div>
+                    <div class="hud-stat">
+                        <span class="hud-stat-label">Porcentagem M&#237;nima</span>
+                        <span class="hud-stat-valor">70%</span>
+                    </div>
+                </div>
+
+                <a class="btn-perigo" href="JogoMenu.html">DESISTIR</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

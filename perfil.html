@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHACK A TOUCAN — Editar Perfil</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho-logo">
+            <button class="btn-voltar" type="button">&#10005;</button>
+            <span class="cabecalho-logo-titulo">WHACK A TOUCAN</span>
+        </div>
+        <span class="cabecalho-usuario">&#127918; Toupeira_BH</span>
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-link" href="ranking.html">Ranking</a>
+            <a class="cabecalho-link cabecalho-link--ativo" href="perfil.html">Editar Perfil</a>
+            <a class="cabecalho-link cabecalho-link--desconectar" href="Login.html">Desconectar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-conteudo">
+        <div class="perfil-card card">
+
+            <h2 class="perfil-titulo">&#128100; Editar Perfil</h2>
+
+            <form action="JogoMenu.html" method="get">
+
+                <!-- Campos bloqueados -->
+                <p class="perfil-secao-label perfil-secao-label--bloqueado">
+                    Dados bloqueados para edi&#231;&#227;o (seguran&#231;a)
+                </p>
+
+                <div class="perfil-campos">
+                    <div class="perfil-linha">
+                        <div>
+                            <label class="label-input" for="username">Username</label>
+                            <input
+                                class="campo-input"
+                                id="username"
+                                name="username"
+                                type="text"
+                                value="Toupeira_BH"
+                                disabled>
+                        </div>
+                        <div>
+                            <label class="label-input" for="nascimento">Data de Nascimento</label>
+                            <input
+                                class="campo-input"
+                                id="nascimento"
+                                name="nascimento"
+                                type="text"
+                                value="25/11/1998"
+                                disabled>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-input" for="cpf">CPF</label>
+                        <input
+                            class="campo-input"
+                            id="cpf"
+                            name="cpf"
+                            type="text"
+                            value="123.***.***-99"
+                            disabled>
+                    </div>
+                </div>
+
+                <!-- Campos editáveis -->
+                <p class="perfil-secao-label perfil-secao-label--editavel">
+                    Dados alter&#225;veis
+                </p>
+
+                <div class="perfil-campos">
+                    <div>
+                        <label class="label-input" for="nome">Nome Completo</label>
+                        <input
+                            class="campo-input"
+                            id="nome"
+                            name="nome"
+                            type="text"
+                            value="Bruno Henrique">
+                    </div>
+                    <div class="perfil-linha">
+                        <div>
+                            <label class="label-input" for="telefone">Telefone</label>
+                            <input
+                                class="campo-input"
+                                id="telefone"
+                                name="telefone"
+                                type="tel"
+                                value="(11) 98765-4321">
+                        </div>
+                        <div>
+                            <label class="label-input" for="email">E-mail</label>
+                            <input
+                                class="campo-input"
+                                id="email"
+                                name="email"
+                                type="email"
+                                value="toupeira_bh@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-input" for="senha">Nova Senha (deixe em branco para manter)</label>
+                        <input
+                            class="campo-input"
+                            id="senha"
+                            name="senha"
+                            type="password"
+                            placeholder="Digite a nova senha se desejar alterar">
+                    </div>
+                </div>
+
+                <button class="btn-primario" type="submit">SALVAR ALTERA&#199;&#213;ES</button>
+
+            </form>
+
+        </div>
+    </main>
+
+</body>
+</html>
